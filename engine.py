@@ -1081,14 +1081,9 @@ class Window(pyglet.window.Window):
 
     def on_key_release(self, symbol, modifiers):
         # 键盘松键
-        if symbol == key.W:
-            self.strafe[0] += 1
-        elif symbol == key.S:
-            self.strafe[0] -= 1
-        elif symbol == key.A:
-            self.strafe[1] += 1
-        elif symbol == key.D:
-            self.strafe[1] -= 1
+         # 键盘松键
+        if symbol in [key.W, key.S, key.A, key.D]:
+            self.strafe=[0, 0]
         elif symbol == key.SPACE:
             self.jumping = False
 
